@@ -528,9 +528,12 @@ flex-wrap: wrap;
 }
 
 .valores-imagem img{
-width:420px;
+width:100%;
+max-width:420px;
+height:auto;
 border-radius:12px;
 transition:0.5s;
+display:block;
 }
 
 .valores-imagem img:hover{
@@ -1103,6 +1106,47 @@ img {
 }
 
 }
+@media (max-width: 768px){
+
+  .valores{
+    padding: 60px 20px;
+  }
+
+  .valores-wrapper{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .valores-imagem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .valores-imagem img,
+  .zoom-img{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .valores-conteudo{
+    width: 100%;
+  }
+
+  .valores-conteudo h2{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .valores-conteudo h2::after{
+    margin: 10px auto 0;
+  }
+
+}
 </style>
 
 <section class="hero" id="inicio">
@@ -1371,6 +1415,7 @@ revealOnScroll();
 </body>
 
 </html>
+
 
 
 
